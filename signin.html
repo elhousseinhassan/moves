@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Fuggles&family=Libre+Baskerville:wght@400;700&family=Roboto:wght@500&family=Rubik:ital@1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            font-family: 'Caveat', cursive;
+            font-family: 'Fuggles', cursive;
+            font-family: 'Libre Baskerville', serif;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Rubik', sans-serif;
+            min-height: 100vh;
+            background-color: rgba(71, 70, 70, 0.626);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav {
+            padding: 0 6%;
+            display: flex;
+            height: 60px;
+            background-color: black;
+        }
+
+        h3 {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        h3 i{
+            font-size: 28px;
+            color: #f5c518;
+        }
+
+        menu {
+            display: flex;
+            flex: 2;
+            gap: 30px;
+            align-items: center;
+            justify-content: start;
+        }
+
+        menu a {
+            padding: 20px;
+            position: relative;
+        }
+
+        menu a:hover {
+            color: rgba(1, 158, 255, 0.911);
+        }
+        nav menu a:after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: rgba(1, 158, 255, 0.911);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: .6s;
+        }
+
+        nav menu a:hover::after {
+            width: 100%;
+        }
+
+        .bottom {
+            display: flex;
+            flex: 1;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bottom a:nth-child(1) {
+            color: rgba(1, 158, 255, 0.911);
+        }
+
+        .bottom .sign-up-botton {
+            background-color: rgba(1, 158, 255, 0.911);
+            padding: 6px 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(1, 158, 255, 0.911);
+        }
+
+        .bottom a:hover {
+            color: rgba(1, 158, 255, 0.911);
+        }
+
+        .bottom .sign-up-botton:hover {
+            background-color: rgba(1, 158, 255, 0.618);
+            border: 1px solid white;
+            color: white;
+        }
+
+        main {
+            height: calc(100vh - 60px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 6%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.56);
+            border-radius: 10px;
+            box-shadow: 1px 2px 2px rgb(219, 207, 207);
+        }
+
+        form p {
+            font-size: 18px;
+            color: rgba(71, 70, 70, 0.626);
+            margin: 10px;
+        }
+
+        form h2 {
+            font-size: 25px;
+            margin: 10px;
+        }
+
+        .reset-check {
+            margin: 30px;
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            color: rgba(71, 70, 70, 0.626);
+        }
+
+        .reset-check a {
+            font-size: 18px;
+            color: rgba(1, 158, 255, 0.911);
+            font-weight: 800;
+        }
+
+        .reset-check a:hover {
+            color: rgba(1, 158, 255, 0.663);
+        }
+
+        form .get-email input {
+            background-color: rgba(255, 255, 255, 0.6);
+            outline: none;
+            border: none;
+            padding: 0 20px;
+            width: 400px;
+            height: 40px;
+            margin-bottom:10px ;
+        }
+
+        form .get-password input {
+            background-color: rgba(255, 255, 255, 0.6);
+            outline: none;
+            border: none;
+            padding: 0 20px;
+            width: 400px;
+            height: 40px;
+        }
+
+        form input:hover {
+            border: 1px solid rgba(1, 158, 255, 0.911);
+        }
+
+        form .continue {
+            background-color: rgba(71, 70, 70, 0.411);
+            border-radius: 20px;
+            padding: 10px 90px;
+            margin: 10px;
+        }
+
+        form .continue:hover {
+            background-color: rgba(71, 70, 70, 0.29);
+        }
+footer{
+    color: white;
+    padding: 0 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    background-color: black;
+}
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h3><i class="fa-solid fa-circle-play"></i>Movies</h3>
+            <menu>
+                <a href="index.html">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="sieres.html">Sieres</a>
+            </menu>
+            <div class="bottom">
+                <a href="#">Sign In</a>
+                <a href="signup.html" class="sign-up-botton">Sign Up</a>
+            </div>
+        </nav>
+        <main>
+            <form action="">
+                <h2>Welcome Back!</h2>
+                <p>Sign in using</p>
+                <div class="get-email">
+                    <label for="Email">
+                        <h4>Email</h4>
+                    </label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="get-password">
+                    <label for="Password">
+                        <h4>Password</h4>
+                    </label>
+                    <input type="password" id="Password" required>
+                </div>
+                <div class="reset-check">
+                    <label for="A">
+                        <input type="checkbox" id="A">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#">Reset Password</a>
+                </div>
+                <a href="#" class="continue">Continue</a>
+            </form>
+        </main>
+        <footer><p>Copyright © 2024 Movies For Everyone All Rights Reserved</p></footer>
+    </div>
+</body>
+
+</html>
